@@ -47,6 +47,18 @@ Add the kanso-topbar stylesheet to your HTML:
 <link rel="stylesheet" type="text/css" href="kanso-topbar/topbar.css" />
 ```
 
+You also need to add an element with the id 'kanso-topbar', which will be populated with the topbar elements. Here, you should also add the name of your application and optionally any app-specific navigation to show in the topbar:
+
+```html
+<div id="kanso-topbar">
+    <div class="appname">My App</div>
+    <ul>
+        <li><a href="#">First nav item</a></li>
+        <li><a href="#">Second nav item</a></li>
+    </ul>
+</div>
+```
+
 Finally, make sure you call the kanso-topbar init function using jQuery document ready, or by adding a script tag at the bottom of the page. This should go after you've included `modules.js`:
 
 ```javascript
@@ -55,3 +67,8 @@ require('kanso-topbar').init();
 
 If you're using the Duality framework, you may wish to add this to an
 `init` event handler instead.
+
+
+### Add menu items
+
+You can add menu items to the top bar by adding a `<ul>`
